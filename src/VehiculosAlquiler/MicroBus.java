@@ -19,16 +19,19 @@ public class MicroBus extends Vehiculo {
 	}
 	
 	
-	
-	public double getPrecioDia() {
+
+
+	public double getPrecioTotal() {
 		return precioTotal;
 	}
 
 
 
-	public void setPrecioDia(double precioDia) {
-		this.precioTotal = precioDia;
+
+	public void setPrecioTotal(double precioTotal) {
+		this.precioTotal = precioTotal;
 	}
+
 
 
 
@@ -38,11 +41,12 @@ public class MicroBus extends Vehiculo {
 
 
 
+
 	public void setPlazas(int plazas) {
 		this.plazas = plazas;
 	}
-	
-	
+
+
 
 
 	public int getDias() {
@@ -51,9 +55,12 @@ public class MicroBus extends Vehiculo {
 
 
 
+
 	public void setDias(int dias) {
 		this.dias = dias;
 	}
+
+
 
 
 	//tiene 50 € el dia de base pero se le aumenta  menos que el coche, pues el coche son
@@ -76,7 +83,16 @@ public class MicroBus extends Vehiculo {
 	public static void main (String [] args) {
 		
 		MicroBus prueba = new MicroBus("1234XCW", 50, 3);
-		System.out.println(prueba.getPrecioDia());
+		System.out.println(prueba.getPrecioTotal());
+	}
+
+
+
+
+	@Override
+	public void precioAPagar() {
+		System.out.println(getPrecioTotal());
+		
 	}
 
 }

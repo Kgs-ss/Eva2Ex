@@ -3,13 +3,13 @@ package VehiculosAlquiler;
 public class Camion extends Vehiculo {
 
 	private double precioTotal;
-	private double peso;
+	private double pesoToneladas;
 	private int dias;
 	private int precioDia;
 	
 	public Camion(String matricula, double peso, int dias) {
 		super(matricula);
-		this.peso = peso;
+		this.pesoToneladas = peso;
 		this.dias = dias;
 		this.precioDia = 50;
 		this.precioTotal = precioTotalDia(peso, dias );
@@ -17,28 +17,31 @@ public class Camion extends Vehiculo {
 	}
 	
 	
-	
-	public double getPrecioDia() {
+	public double getPrecioTotal() {
 		return precioTotal;
 	}
 
 
 
-	public void setPrecioDia(double precioDia) {
-		this.precioTotal = precioDia;
+
+	public void setPrecioTotal(double precioTotal) {
+		this.precioTotal = precioTotal;
 	}
 
 
 
-	public double getPeso() {
-		return peso;
+
+	public double getPesoToneladas() {
+		return pesoToneladas;
 	}
 
 
 
-	public void setPeso(double peso) {
-		this.peso = peso;
+
+	public void setPesoToneladas(double pesoToneladas) {
+		this.pesoToneladas = pesoToneladas;
 	}
+
 
 
 
@@ -48,21 +51,12 @@ public class Camion extends Vehiculo {
 
 
 
+
 	public void setDias(int dias) {
 		this.dias = dias;
 	}
 
 
-
-	public int getPrecio() {
-		return precioDia;
-	}
-
-
-
-	public void setPrecio(int precio) {
-		this.precioDia = precio;
-	}
 
 
 	//el precio tiene un suplemento de 40 euros al dia entiendo
@@ -74,11 +68,20 @@ public class Camion extends Vehiculo {
 	}
 
 
-
 	@Override
 	public String toString() {
-		return "Camión peso=" + peso + ", dias=" + dias + ", precio=" + precioDia;
+		return "Camión peso=" + pesoToneladas + ", dias=" + dias + ", precio=" + precioTotal;
 	}
+
+
+	@Override
+	public void precioAPagar() {
+		System.out.println(getPrecioTotal());
+		
+	}
+
+
+	
 	
 	
 }

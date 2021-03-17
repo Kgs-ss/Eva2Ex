@@ -18,15 +18,21 @@ public class Coche extends Vehiculo {
 	
 	
 	
-	public double getPrecioDia() {
+
+
+	public double getPrecioTotal() {
 		return precioTotal;
 	}
 
 
 
-	public void setPrecioDia(double precioDia) {
-		this.precioTotal = precioDia;
+
+
+	public void setPrecioTotal(double precioTotal) {
+		this.precioTotal = precioTotal;
 	}
+
+
 
 
 
@@ -36,11 +42,14 @@ public class Coche extends Vehiculo {
 
 
 
+
+
 	public void setPlazas(int plazas) {
 		this.plazas = plazas;
 	}
-	
-	
+
+
+
 
 
 	public int getDias() {
@@ -49,9 +58,13 @@ public class Coche extends Vehiculo {
 
 
 
+
+
 	public void setDias(int dias) {
 		this.dias = dias;
 	}
+
+
 
 
 
@@ -69,13 +82,25 @@ public class Coche extends Vehiculo {
 	public String toString() {
 		return "Coche precioDia=" + precioTotal + " €, plazas=" + plazas ;
 	}
-	
-	public static void main (String [] args) {
+
+
+
+
+
+	@Override
+	public void precioAPagar() {
+		System.out.println(getPrecioTotal());
 		
-		Coche prueba = new Coche("1234XCW", 2, 4);
-		System.out.println(prueba);
-		System.out.println(prueba.getPrecioDia());
 	}
+	
+	
+	
+//	public static void main (String [] args) {
+//		
+//		Coche prueba = new Coche("1234XCW", 2, 4);
+//		System.out.println(prueba);
+//		System.out.println(prueba.getPrecioTotal());
+//	}
 
 }
 

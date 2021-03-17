@@ -1,6 +1,6 @@
 package VehiculosAlquiler;
 
-public abstract class Vehiculo {
+public abstract class Vehiculo implements Alquiler{
 	
 	private String matricula;
 	
